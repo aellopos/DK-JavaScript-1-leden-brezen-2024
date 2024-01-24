@@ -1,4 +1,4 @@
-# Příklady - Proměnné
+# Příklady - Funkce
 
 ## Výplata
 
@@ -44,14 +44,7 @@ Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 
 </details>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
-
-<details>
-<summary><b>Řešení</b></summary>
-
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
-
-</details>
+# Příklady - Proměnné
 
 ## Náhodná čísla
 
@@ -74,6 +67,25 @@ Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 1. Vypište obsah proměnné :var[wageInCzk] do webové stránky tak, aby na stránce byl nadpis `h1` s obsahem:
 
    > Mzda v korunách: 532 Kč
+
+
+
+<details>
+<summary><b>Řešení</b></summary>
+
+Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
+
+</details>
+
+## Ultramaraton
+
+Představte si, že jste pořadatelé ultramaratonského závodu. Závod začíná ve **tři hodiny odpoledne**, což ve 24hodinovém formátu zapíšeme jako **15**. Nejlepší běžec zvládne vaši brutální trasu za **10 hodin**. Doběhne tedy **v jednu hodinu ráno**, v našem formátu zapsáno jako **1**.
+
+1. Založte si JavaScriptový program a uložte čas startu závodu do proměnné `start`.
+1. Do proměnné `delka` uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion.
+1. Do proměnné `konec` spočítejte, v kolik hodin závod pro našeho běžce skončí a vypište její obsah do stránky.
+1. Vyzkoušejte různé délky a ověřte, že váš postup funguje.
+
 
 
 
