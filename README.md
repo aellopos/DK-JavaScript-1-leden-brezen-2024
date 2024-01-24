@@ -9,6 +9,6 @@
 
 |    | Datum     | Téma             | Prezentace                                                           | Rešení        | Podklady
 | -- | --------- | ---------------- | -------------------------------------------------------------------- | ------------- | -------------
-| 01  | 24.01.2024 | Úvod | [prezentace](./pdfs/lekce01.pdf) | [zadání/řešení](./reseni/lekce-01.md) | -
+| 01  | 24.01.2024 | Úvod | [prezentace](./pdfs/lekce01.pdf) | [zadání/řešení](./solution/lekce-01.md) | -
 
 
