@@ -1,4 +1,4 @@
-# Příklady - Funkce
+# Příklady - Proměnné
 
 ## Výplata
 
@@ -11,7 +11,19 @@
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
+
+#### Měsíční příjem
+
+```js
+document.body.innerHTML += 21 * 7 * 320;
+```
+
+#### Daň
+
+```js
+document.body.innerHTML += '<br>';
+document.body.innerHTML += Math.floor(21 * 7 * 265 * (1 - 0.6) * 0.15);
+```
 
 </details>
 
@@ -26,7 +38,20 @@ V programu kin se často uvádí délka filmu v minutách. Například rozšíř
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
+
+#### Počet celých hodin
+
+```js
+document.body.innerHTML += Math.floor(223 / 60);
+```
+
+#### A počet zbývajících minut
+
+```js
+document.body.innerHTML += '<br>';
+document.body.innerHTML += 223 % 60;
+```
+
 
 </details>
 
@@ -40,11 +65,41 @@ Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
+
+```js
+'Franta' + '.' + 'Dobrota' + '@mujmail.com';
+```
+
 
 </details>
 
-# Příklady - Proměnné
+# Příklady - Funkce
+
+## Ultramaraton
+
+Představte si, že jste pořadatelé ultramaratonského závodu. Závod začíná ve **tři hodiny odpoledne**, což ve 24hodinovém formátu zapíšeme jako **15**. Nejlepší běžec zvládne vaši brutální trasu za **10 hodin**. Doběhne tedy **v jednu hodinu ráno**, v našem formátu zapsáno jako **1**.
+
+1. Založte si JavaScriptový program a uložte čas startu závodu do proměnné `start`.
+1. Do proměnné `delka` uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion.
+1. Do proměnné `konec` spočítejte, v kolik hodin závod pro našeho běžce skončí a vypište její obsah do stránky.
+1. Vyzkoušejte různé délky a ověřte, že váš postup funguje.
+
+
+
+
+<details>
+<summary><b>Řešení</b></summary>
+
+
+```js
+const start = 15;
+const delka = 10;
+const konec = (start + delka) % 24;
+document.body.innerHTML = 'Čas konce v hodinách: ' + konec;
+```
+
+
+</details>
 
 ## Náhodná čísla
 
@@ -55,7 +110,11 @@ Založte si JavaScriptový program a pomocí `document.body.innerHTML` a funkce 
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
+
+```js
+document.body.innerHTML = Math.random();
+```
+
 
 </details>
 
@@ -73,25 +132,14 @@ Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 
-</details>
-
-## Ultramaraton
-
-Představte si, že jste pořadatelé ultramaratonského závodu. Závod začíná ve **tři hodiny odpoledne**, což ve 24hodinovém formátu zapíšeme jako **15**. Nejlepší běžec zvládne vaši brutální trasu za **10 hodin**. Doběhne tedy **v jednu hodinu ráno**, v našem formátu zapsáno jako **1**.
-
-1. Založte si JavaScriptový program a uložte čas startu závodu do proměnné `start`.
-1. Do proměnné `delka` uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion.
-1. Do proměnné `konec` spočítejte, v kolik hodin závod pro našeho běžce skončí a vypište její obsah do stránky.
-1. Vyzkoušejte různé délky a ověřte, že váš postup funguje.
+```js
+const wageInEur = 20;
+const rate = 24.55;
+const wageInCzk = Math.round(wageInEur * rate);
+document.body.innerHTML = '<h1>Mzda v korunách: ' + wageInCzk + ' Kč</h1>';
+```
 
 
-
-
-<details>
-<summary><b>Řešení</b></summary>
-
-Tady zatím nic není, zeptej se kouče, řešení se tady brzy objeví. :)
 
 </details>
