@@ -11,6 +11,6 @@
 | -- | --------- | ---------------- | -------------------------------------------------------------------- | ------------- | -------------
 | 01  | 24.01.2024 | Úvod | [prezentace](./pdfs/lekce01.pdf) | [zadání/řešení](./solution/lekce-01.md) | -
 | 02  | 31.01.2024 | Úvod do Gitu a GitHubu | [prezentace](./pdfs/lekce02.pdf) | [zadání/řešení](./solution/lekce-02.md) | -
-| 03  | 07.02.2024 | Vstup a výstup, objekty | [prezentace](https://kodim.cz/vyvoj-webu/js1/lekce/vstup-vystup-objekty/vstup) | [zadání/řešení](./solution/lekce-03.md) | [zadání](./solution/du_treti_lekce.md)
+| 03  | 07.02.2024 | Vstup a výstup, objekty | [prezentace](https://kodim.cz/vyvoj-webu/js1/lekce/vstup-vystup-objekty/vstup) | [zadání/řešení](./solution/lekce-03.md) | [zadání](./solution/du_treti_lekce.md) (do 18.2. 20:00)
 
 
