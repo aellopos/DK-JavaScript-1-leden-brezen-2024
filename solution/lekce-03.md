@@ -14,7 +14,14 @@ Představte si, že vyrábíte registrační systém na očkování proti COVID-
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const celeJmeno = prompt("Jake je vase jmeno a primeni?");
+const vek = Number(prompt("Jaky je vas vek?"));
+
+document.body.innerHTML += "<p>" + celeJmeno + ", vek: " + vek + "</p>";
+```
+
 
 </details>
 
@@ -26,7 +33,15 @@ Tady zatím nic není :)
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const hodinovaSazba = Number(prompt("Jaká je vaše hodinová sazba?"));
+const pocetHodin = Number(prompt("Kolik hodin denně pracujete?"));
+const pocetDni = Number(prompt("Kolik dní měsíčně pracujete?"));
+
+document.body.innerHTML += "<p>Vaše vyplata činí " + (hodinovaSazba*pocetHodin*pocetDni) + " korun</p>";
+```
+
 
 </details>
 
@@ -75,7 +90,46 @@ Vytvořte webovou stránku s JavaScriptem, zkopírujte si tento kód do vašeho 
 <summary><b>Řešení</b></summary>
 
 
-Tady zatím nic není :)
+```js
+const apartment = {
+  type: 'rent',
+  disposition: '3+1',
+  area: {
+    floorage: 100,
+    balcony: 2,
+    units: 'sqm',
+  },
+  city: 'Prague',
+  district: 'Old Town',
+  price: {
+    rent: 28000,
+    fees: {
+      water: 1000,
+      energy: 2500,
+      services: 560,
+    },
+    currency: 'czk',
+  },
+  ownership: 'personal',
+  condition: 'renovated',
+  status: 'free',
+  floor: 3,
+};
+
+document.body.innerHTML += "<p>Dispozice: "+ apartment.disposition +"</p>"
+document.body.innerHTML += "<p>Najem bez poplatku: "+ apartment.price.rent +"</p>"
+document.body.innerHTML += "<p>Vymera bytu: "+ apartment.area.floorage + apartment.area.units +"</p>"
+
+const city = apartment.city;
+const district = apartment.district;
+
+document.body.innerHTML += "<p>Mesto: "+ city +"</p>"
+document.body.innerHTML += "<p>Mestska cast: "+ district +"</p>"
+
+apartment.status = "taken"
+document.body.innerHTML += "<p>Stav inzeratu: "+ apartment.status +"</p>"
+```
+
 
 </details>
 
@@ -88,9 +142,45 @@ Tady zatím nic není :)
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const book = {
+  title: 'Lord of the Rings',
+  author: {
+    name: 'John Ronald Reuel',
+    surename: 'Tolkien',
+    age: 81,
+  },
+  numberOfPages: 2057,
+  movie: {
+    year: 2000,
+    director: {
+      name: 'Peter',
+      surname: 'Jackson',
+    },
+    actors: {
+      actor1: {
+        name: 'Orlando',
+        surname: 'Bloom',
+        characterName: 'Legolas',
+      },
+      actor2: {
+        name: 'Elijah',
+        surname: 'Wood',
+        characterName: 'Frodo',
+      },
+      actor3: {
+        name: 'Viggo',
+        surname: 'Mortensen',
+        characterName: 'Aragorn',
+      },
+    },
+  },
+};
+```
 
 </details>
+
 
 ## Očkování – objekty
 
@@ -110,6 +200,18 @@ Pokračujme v našem registračním systému na očkováni. Zatím se umíme už
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const person = {
+  name: prompt("Jaké je vaše jméno a příjmení?"),
+  age: Number(prompt("Jaký je váš věk?")),
+  language: window.navigator.language,
+};
+
+document.body.innerHTML += "<p>Zadané jméno: " + person.name + ", váš věk: " + person.age + "</p>";
+document.body.innerHTML += "<p>Váš jazyk: " + person.language + "</p>";
+document.body.innerHTML += "<p>Byli jste zaregistrováni na očkování.</p>";
+```
+
 
 </details>
