@@ -12,7 +12,17 @@ V JavaScriptovém programu si založte proměnnou `title` a uložte do ní **ná
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const title = "Lord of the Rings";
+document.body.innerHTML += title.length;
+document.body.innerHTML += `<br>`;
+document.body.innerHTML += title.toUpperCase();
+document.body.innerHTML += `<br>`;
+document.body.innerHTML += title.slice(0, 5);
+document.body.innerHTML += `<br>`;
+document.body.innerHTML += title.slice(title.length - 5, title.length)
+```
 
 </details>
 
@@ -49,7 +59,18 @@ Postupujte dle následujících kroků.
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const email = prompt('Zadejte e-mail:');
+const atIndex = email.indexOf('@');
+const parsedEmail = {
+  userName: email.slice(0, atIndex),
+  domain: email.slice(atIndex + 1),
+};
+document.body.innerHTML =
+  '<p>Uživatelské jméno: ' + parsedEmail.userName + '</p>';
+document.body.innerHTML += '<p>Doména: ' + parsedEmail.domain + '</p>';
+```
+
 
 </details>
 
@@ -71,7 +92,19 @@ Vytvořte webovou stránku, kde uživatel zadá svoji adresu například pro ú�
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const street = prompt('Zadejte ulici:');
+const houseNumber = prompt('Zadejte číslo domu:');
+const city = prompt('Zadejte město:');
+const zipCode = prompt('Zadejte PSČ:');
+
+document.body.innerHTML = `
+   <address>
+      <p>${street} ${houseNumber}</p>
+      <p>${zipCode} ${city}</p>
+   </address>
+`;
+```
 
 </details>
 
@@ -91,7 +124,23 @@ Vytvořte novou stránku, nebo pokračujte ve stránce z předchozí lekce pro r
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+```js
+const name = prompt('Zadejte své jméno:');
+const age = Number(prompt('Zadejte svůj věk:'));
+const heslo = prompt('Zadejte nové heslo:');
+
+if (age >= 65) {
+  document.body.innerHTML += '<p>Věk je v pořádku</p>.';
+  if (heslo.length <= 8) {
+    document.body.innerHTML += '<p>Slabé heslo</p>.';
+  } else {
+    document.body.innerHTML += '<p>Heslo je v pořádku</p>.';
+  }
+} else {
+  document.body.innerHTML += '<p>Nízký věk</p>.';
+}
+```
 
 </details>
 
@@ -116,6 +165,57 @@ Pokusme se o základ jednoduchého rezervačního sestému pro vstupenky do diva
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+
+
+```js
+const plnaCena = 12;
+let cena;
+const age = Number(prompt('Zadejte svůj věk:'));
+if (age < 6) {
+  cena = 0;
+} else if (age >= 6 && age <= 26) {
+  cena = plnaCena * 0.65;
+} else if (age >= 27 && age <= 64) {
+  cena = plnaCena;
+} else {
+  cena = plnaCena * 0.5;
+}
+cena = Math.ceil(cena);
+document.body.innerHTML += `<p>Cena lístku je ${cena} €.`;
+```
+
+Druhá možnost, plnou cenu bereme jako základní a v `if` testujeme jenom výjimky:
+
+```js
+const plnaCena = 12;
+let cena = plnaCena;
+const age = Number(prompt('Zadejte svůj věk:'));
+if (age < 6) {
+  cena = 0;
+} else if (age >= 6 && age <= 26) {
+  cena = plnaCena * 0.65;
+} else if (age > 64) {
+  cena = plnaCena * 0.5;
+}
+cena = Math.ceil(cena);
+document.body.innerHTML += `<p>Cena lístku je ${cena} €.`;
+```
+
+Pro fajnšmekry třetí možnost s operátorem `*=`, který funguje podobně jako `+=`, ale pro násobení. Tato možnost
+neodpovídá přesně zadání, protože vůbec nepotřebujeme proměnnou `plnaCena`:
+
+```js
+let cena = 12;
+const age = Number(prompt('Zadejte svůj věk:'));
+if (age < 6) {
+  cena = 0;
+} else if (age >= 6 && age <= 26) {
+  cena *= 0.65;
+} else if (age > 64) {
+  cena *= 0.5;
+}
+cena = Math.ceil(cena);
+document.body.innerHTML += `<p>Cena lístku je ${cena} €.`;
+```
 
 </details>
