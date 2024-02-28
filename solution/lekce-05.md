@@ -16,7 +16,30 @@ Na konci by stránka v prohlížeči měla vypadat jako na obrázku níže:
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+// a.
+const bodyElement = document.querySelector('body');
+bodyElement.style.backgroundColor = '#e9e9e9';
+
+// b.
+const newsElm = document.querySelector('.news');
+newsElm.style.backgroundColor = 'white';
+newsElm.style.maxWidth = '60rem';
+
+// c.
+const headingElm = document.querySelector('h1');
+headingElm.classList.add('news__title');
+headingElm.textContent = 'Aktuální novinky';
+
+// d.
+const firstPostElm = document.getElementById('zprava1');
+firstPostElm.classList.add('post--main');
+
+// e.
+const lastPostImgElm = document.querySelector('#zprava3 img');
+lastPostImgElm.src = 'images/zprava3-novy.jpg';
+```
+
 
 </details>
 
@@ -50,7 +73,20 @@ Vytvořte si repozitář ze šablony [cviceni-hod-minci](https://github.com/aell
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const vysledek = document.querySelector('.vysledek');
+const mince = document.querySelector('.mince');
+
+const padlOrel = Math.random() < 0.5;
+
+if (padlOrel) {
+  vysledek.textContent = 'Padl orel';
+  mince.classList.add('mince--orel');
+} else {
+  vysledek.textContent = 'Padla panna';
+  mince.classList.add('mince--panna');
+}
+```
 
 </details>
 
@@ -65,8 +101,26 @@ Použijte funkci `prompt` a zeptejte se uživatele na správnou odpověď. Vyber
 <details>
 <summary><b>Řešení</b></summary>
 
+```js
+const questionElm = document.querySelector('.question');
+const question =
+  'Uveďte příjmení amerického vynálezce, který v roce 1876 jako první úspěšně podal patent na zařízení, které je dnes považováno za první telefon.';
 
-Tady zatím nic není :)
+questionElm.textContent = question;
+
+const userAnswer = prompt(question);
+
+const answerTextElm = document.querySelector('.answer__text');
+answerTextElm.textContent = userAnswer;
+
+const answerElm = document.querySelector('.answer');
+
+if (userAnswer === 'Bell') {
+  answerElm.classList.add('answer--correct');
+} else {
+  answerElm.classList.add('answer--wrong');
+}
+```
 
 </details>
 
@@ -86,7 +140,17 @@ Na konci by stránka v prohlížeči měla vypadat jako na obrázku níže:
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const firstCard = document.querySelector('#product1');
+firstCard.classList.add('border-primary');
+
+const secondCardButton = document.querySelector('#product2 button');
+secondCardButton.classList.remove('btn-primary');
+
+const thirdCardTitle = document.querySelector('#product3 .card-title');
+thirdCardTitle.classList.toggle('text-center');
+```
+
 
 </details>
 
@@ -118,6 +182,60 @@ Pokračujte v předchozím cvičení. Všimněte si, že v souboru `index.js` js
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const product1 = {
+  image: 'images/destniklobouk.jpg',
+  name: 'Deštníklobouk',
+  description:
+    'Vynikající pokud si často zapomínáte deštník a nechcete být nikdy překvapeni nečekanou přeháňkou.',
+};
+
+const product2 = {
+  image: 'images/slepickabelka.jpg',
+  name: 'Slepičkabelka',
+  description:
+    'Nejlepší způsob jak zaujmout neotřelou módou v ulíčkách kolem Staroměstkého náměstí.',
+};
+
+const product3 = {
+  image: 'images/anatoplavky.jpg',
+  name: 'Anatoplavky',
+  description:
+    'Aby muži na rozpálených plážích kromě vašeho těla obdivovali také vaše nitro.',
+};
+
+const product1HTML = `
+  <img class="card-img-top" src="${product1.image}" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">${product1.name}</h2>
+    <p class="card-text">${product1.description}</p>
+  </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
+const product1Elm = document.querySelector('#product1');
+product1Elm.innerHTML = product1HTML;
+
+const product2HTML = `
+  <img class="card-img-top" src="${product2.image}" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">${product2.name}</h2>
+    <p class="card-text">${product2.description}</p>
+  </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
+const product2Elm = document.querySelector('#product2');
+product2Elm.innerHTML = product2HTML;
+
+const product3HTML = `
+  <img class="card-img-top" src="${product3.image}" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">${product3.name}</h2>
+    <p class="card-text">${product3.description}</p>
+  </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
+const product3Elm = document.querySelector('#product3');
+product3Elm.innerHTML = product3HTML;
+```
 
 </details>
