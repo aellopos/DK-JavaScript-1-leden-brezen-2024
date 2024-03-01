@@ -17,6 +17,8 @@ Tady zatím nic není :)
 
 </details>
 
+# Úkol 04
+
 ## Maximum ze tří čísel
 
 Napište funkci `max3`, která vrátí největší ze tří zadaných čísel. Opět se vyhněte použití funkce `Math.max`.
