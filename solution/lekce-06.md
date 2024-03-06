@@ -37,7 +37,21 @@
 <summary><b>Řešení</b></summary>
 
 
-Tady zatím nic není :)
+
+```js
+const email = prompt('Zadejte váš e-mail');
+
+const isEmail = validator.isEmail(email);
+const messageElement = document.querySelector('#message');
+
+if (isEmail) {
+  messageElement.textContent = 'E-mail v pořádku';
+  messageElement.classList.add('msg--valid');
+} else {
+  messageElement.textContent = 'Neplatný e-mail';
+  messageElement.classList.add('msg--invalid');
+}
+```
 
 </details>
 
@@ -61,7 +75,19 @@ Vytvořte podobnou stránku s vaším vlastním tématem.
 <summary><b>Řešení</b></summary>
 
 
-Tady zatím nic není :)
+
+
+```js
+const today = dayjs();
+const aliensFoundDate = dayjs('2042-11-06');
+const pageTitleEl = document.querySelector('h1');
+
+if (today.isAfter(aliensFoundDate)) {
+  pageTitleEl.textContent = 'Mimozemšťané konečně objeveni!';
+} else {
+  pageTitleEl.textContent = 'Mimoze-co? Nevím, o čem to mluvíte.';
+}
+```
 
 
 </details>
@@ -84,8 +110,15 @@ Funkci `ellipseArea` otestujte (např. pomocí `document.body.innerHTML +=` vypi
 <details>
 <summary><b>Řešení</b></summary>
 
+```js
+const ellipseArea = (width, height) => {
+  return (width / 2) * (height / 2) * Math.PI;
+};
 
-Tady zatím nic není :)
+document.body.innerHTML += `<p>${ellipseArea(1, 2)}</p>`;
+document.body.innerHTML += `<p>${ellipseArea(2, 2)}</p>`;
+```
+
 
 </details>
 
@@ -98,7 +131,15 @@ Napište funkci `max2`, která **vrátí větší ze dvou zadaných čísel**. V
 <summary><b>Řešení</b></summary>
 
 
-Tady zatím nic není :)
+```js
+const max2 = (a, b) => {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+};
+```
 
 </details>
 
@@ -145,6 +186,30 @@ Postupujte dle následujících kroků:
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const isDIC = (inputStr) => {
+  // kontrola délky
+  if (inputStr.length < 11) {
+    return false;
+  }
+  if (inputStr.length > 12) {
+    return false;
+  }
+
+  // kontrola prefixu CZ
+  const prefix = inputStr.slice(0, 2);
+  if (prefix !== 'CZ') {
+    return false;
+  }
+
+  // kontrola, že za prefixem jsou jen číslice
+  const digits = inputStr.slice(2);
+  if (!validator.isInt(digits)) {
+    return false;
+  }
+
+  return true;
+};
+```
 
 </details>

@@ -14,4 +14,5 @@
 | 03  | 07.02.2024 | Vstup a výstup, objekty | [prezentace](https://kodim.cz/czechitas/js1/lekce/vstup-vystup-objekty/vstup) | [zadání/řešení](./solution/lekce-03.md) | [zadání](./solution/du_treti_lekce.md) (do 18.2. 20:00)
 | 04  | 14.02.2024 | Práce s řetězci, podmínky | [prezentace](https://kodim.cz/czechitas/js1/lekce/retezce-podminky/vlastnosti-metody) | [zadání/řešení](./solution/lekce-04.md) | [zadání](./solution/du_ctvrta_lekce.md) (do 25.2. 20:00)
 | 05  | 21.02.2024 | DOM | [prezentace](https://kodim.cz/czechitas/js1/lekce/dom-innerhtml/dom) | [zadání/řešení](./solution/lekce-05.md) | -
-| 06  | 28.02.2024 | DOM | [prezentace](https://kodim.cz/czechitas/js1/lekce/knihovny-vlastni-funkce/knihovny) | [zadání/řešení](./solution/lekce-06.md) | [zadání](./solution/du_sesta_lekce.md) (do 10.3. 20:00)
+| 06  | 28.02.2024 | Knihovny a vlastní funkce | [prezentace](https://kodim.cz/czechitas/js1/lekce/knihovny-vlastni-funkce/knihovny) | [zadání/řešení](./solution/lekce-06.md) | [zadání](./solution/du_sesta_lekce.md) (do 10.3. 20:00)
+| 07  | 06.03.2024 | Funkce a obory platnosti | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-obory/null-undefined) | [zadání/řešení](./solution/lekce-07.md) | [zadání](./solution/du_sedma_lekce.md) (do 17.3. 20:00)
