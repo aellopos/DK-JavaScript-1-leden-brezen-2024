@@ -92,7 +92,7 @@ Vytvoříme jednoduchou stránku s objednávacím tlačítkem.
    ```
 1. Upravte program tak, že text se nevypíše do stránky, ale zobrazí se na samotném tlačítku.
 
-[ukázka řešení](images/ukazka.gif)
+[ukázka řešení](../images/ukazka.gif)
 
 <details>
 <summary><b>Řešení</b></summary>
@@ -108,7 +108,7 @@ Vyjděte z řešení předchozího příkladu, kdy se objednává při kliknutí
 1. Přidejte do stránky zpoždění pomocí funkce `setTimeout`, která zařídí, že **8 vteřin** po načtení stránky se zpráva na tlačítku změní na _Objednat_.
 1. Tlačítka mají speciální HTML atribut s názvem `disabled`. Pokud je tento atribut přítomen, na tlačítko se nedá kliknout. Přidejte tento **atribut do HTML** kódu tlačítka, aby tlačítko bylo při načtení stránky nedostupné/neklikatelné. Až **po uplynutí časovače jej zpřístupněte** nastavením vlastnosti `disabled` v JavaScriptu na `false`.
 
-[ukázka řešení](images/ukazka2.gif)
+[ukázka řešení](../images/ukazka2.gif)
 
 <details>
 <summary><b>Řešení</b></summary>
@@ -124,7 +124,7 @@ Vytvořte si repozitář ze šablony [cviceni-zarovka](https://github.com/aellop
 1. Pomocí JavaScriptu zařiďte, aby se při stisknutí libovolné klávesy na stránce přidala k elementu žárovky CSS třída `bulb--on`. Žárovka by se takto měla rozsvítit.
 1. Vylepšete program tak, aby na následné stisknutí libovolné klávesy žárovka opět zhasnula. Opakovaným mačkáním kláves ji tak můžeme rozsvěcovat a zhasínat.
 
-[ukázka řešení](images/zarovka.gif)
+[ukázka řešení](../images/zarovka.gif)
 
 <details>
 <summary><b>Řešení</b></summary>

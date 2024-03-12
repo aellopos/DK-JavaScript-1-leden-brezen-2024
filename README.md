@@ -16,5 +16,4 @@
 | 05  | 21.02.2024 | DOM | [prezentace](https://kodim.cz/czechitas/js1/lekce/dom-innerhtml/dom) | [zadání/řešení](./solution/lekce-05.md) | -
 | 06  | 28.02.2024 | Knihovny a vlastní funkce | [prezentace](https://kodim.cz/czechitas/js1/lekce/knihovny-vlastni-funkce/knihovny) | [zadání/řešení](./solution/lekce-06.md) | [zadání](./solution/du_sesta_lekce.md) (do 10.3. 20:00)
 | 07  | 06.03.2024 | Funkce a obory platnosti | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-obory/null-undefined) | [zadání/řešení](./solution/lekce-07.md) | [zadání](./solution/du_sedma_lekce.md) (do 17.3. 20:00)
-| 08  | 13.03.2024 | Funkce jako argumenty, události
- | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-arg-udalosti/funkce-arg) | [zadání/řešení](./solution/lekce-08.md) | [zadání](./solution/du_osma_lekce.md) (do 17.3. 20:00)
+| 08  | 13.03.2024 | Funkce jako argumenty, události | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-arg-udalosti/funkce-arg) | [zadání/řešení](./solution/lekce-08.md) | [zadání](./solution/du_osma_lekce.md) (do 24.3. 20:00)
