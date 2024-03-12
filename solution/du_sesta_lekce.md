@@ -2,7 +2,7 @@
 
 ## Dovednosti
 
-Vytvořte si repozitář ze šablony [cviceni-dovednosti](https://github.com/Czechitas-podklady-WEB/cviceni-dovednosti).
+Vytvořte si repozitář ze šablony [cviceni-dovednosti](https://github.com/aellopos/cviceni-dovednosti/tree/main).
 V repozitáři najdete zdrojové soubory stránky se třemi posuvníky.
 Ty ukazují úroveň dovedností v různých oblastech.
 
@@ -16,6 +16,8 @@ Ty ukazují úroveň dovedností v různých oblastech.
 Tady zatím nic není :)
 
 </details>
+
+# Úkol 04
 
 ## Maximum ze tří čísel
 
