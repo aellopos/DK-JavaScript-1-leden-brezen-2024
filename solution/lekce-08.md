@@ -1,7 +1,7 @@
 # Cvičení: Funkce jako argumenty
 ## Hesla
 
-Vytvořte si repozitář ze šablony [cviceni-hesla](https://github.com/Czechitas-podklady-WEB/cviceni-hesla) se stránkou, která obsahuje tři různé funkce na generování hesel. Každá funkce vygeneruje heslo zadané délky s určitou bezpečnostní silou. Kód funkcí zkoumat nemusíte, obsahuje věci, které jsme zatím neprobírali.
+Vytvořte si repozitář ze šablony [cviceni-hesla](https://github.com/aellopos/cviceni-hesla) se stránkou, která obsahuje tři různé funkce na generování hesel. Každá funkce vygeneruje heslo zadané délky s určitou bezpečnostní silou. Kód funkcí zkoumat nemusíte, obsahuje věci, které jsme zatím neprobírali.
 
 Příklad samostatného použití jednotlivých funkcí:
 
