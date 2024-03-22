@@ -40,7 +40,18 @@ Uživatel Mápodčepicí s heslem mwwf9epts
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+
+```js
+const createAccount = (user, generatePassword) => {
+  return `Uživatel ${user} s heslem ${generatePassword(9)}`;
+};
+
+document.body.innerHTML += `
+	<p>${createAccount('Míša', weakPassword)}</p>
+	<p>${createAccount('Řízek', mediumPassword)}</p>
+	<p>${createAccount('Mápodčepicí', strongPassword)}</p>
+`;
+```
 
 </details>
 
@@ -73,7 +84,30 @@ fillBody('Zítra oslava. 18:00 ve Starý hospodě.', 'Patrik Veselý', rudeGoodb
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```js
+const goodbye = (name) => {
+  return 'S pozdravem ' + name;
+};
+
+const formalGoodbye = (name) => {
+  return 'S uctivou poklonou ' + name;
+};
+
+const rudeGoodbye = (name) => {
+  return 'Se měj. ' + name;
+};
+
+const fillSubject = (subject) => {
+  document.querySelector('.email__subject').textContent = subject;
+};
+
+const fillBody = (body, name, goodbyeFunction) => {
+  const bodyElement = document.querySelector('.email__body');
+  bodyElement.innerHTML = body;
+  const closingElement = document.querySelector('.email__closing');
+  closingElement.textContent = goodbyeFunction(name);
+};
+```
 
 </details>
 
@@ -97,7 +131,13 @@ Vytvoříme jednoduchou stránku s objednávacím tlačítkem.
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```js
+const button = document.querySelector('#button-order');
+button.addEventListener('click', () => {
+  // document.body.innerHTML += '<p>Objednáno</p>';
+  button.textContent = 'Objednáno';
+});
+```
 
 </details>
 
@@ -113,7 +153,20 @@ Vyjděte z řešení předchozího příkladu, kdy se objednává při kliknutí
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```html
+<button id="button-order" disabled>Kontroluji dostupnost…</button>
+```
+
+```js
+const button = document.querySelector('#button-order');
+setTimeout(() => {
+  button.textContent = 'Objednat';
+  button.disabled = false;
+}, 8000);
+button.addEventListener('click', () => {
+  button.textContent = 'Objednáno';
+});
+```
 
 </details>
 
@@ -129,6 +182,11 @@ Vytvořte si repozitář ze šablony [cviceni-zarovka](https://github.com/aellop
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```js
+const bulb = document.querySelector('.bulb');
+document.addEventListener('keydown', () => {
+  bulb.classList.toggle('bulb--on');
+});
+```
 
 </details>

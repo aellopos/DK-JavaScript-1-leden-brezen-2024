@@ -19,7 +19,44 @@ Zařiďte, aby se při kliknutí na libovolné tlačítko na displeji kalkulačk
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```js
+const display = document.querySelector('.display');
+
+const handleDigitClick = (event) => {
+  if (display.textContent.length >= 9) {
+    return; // Uživatel se pokouší zadat delší číslo, než kolik máme číslic na displeji – nedovolíme mu to.
+  }
+  const digit = event.target.textContent;
+  display.textContent += digit;
+};
+
+document.querySelector('#btn-0').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-1').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-2').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-3').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-4').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-5').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-6').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-7').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-8').addEventListener('click', handleDigitClick);
+document.querySelector('#btn-9').addEventListener('click', handleDigitClick);
+```
+
+#### Bonus
+
+```js
+const handleDigitClick = (event) => {
+  if (display.textContent.length >= 9) {
+    return;
+  }
+  const digit = event.target.textContent;
+  if (display.textContent === '0') {
+    display.textContent = digit;
+  } else {
+    display.textContent += digit;
+  }
+};
+```
 
 </details>
 
@@ -44,7 +81,39 @@ Podle postupu níže vyrobte stránku podobnou té na obrázku.
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není
+```html
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Newsletter</title>
+		<link rel="stylesheet" href="styly.css" />
+		<script type="module" src="index.js"></script>
+	</head>
+	<body>
+		<form>
+			<p>Jednou za týden posíláme newsletter ze světa frontendu a UX.</p>
+			<p>Zadejte svůj e-mail a zůstaňte v obraze.</p>
+			<input type="text" /> <button type="submit">Odebírat</button>
+		</form>
+	</body>
+</html>
+```
+
+```js
+const formular = document.querySelector('form')
+
+const odebirat = (event) => {
+	event.preventDefault()
+	const input = document.querySelector('input')
+	const email = input.value
+	formular.textContent = `Děkujeme za váš zájem. Těšte se na novinky ze světa frontendu a UX na vaší adrese ${email}.`
+}
+
+formular.addEventListener('submit', odebirat)
+```
 
 </details>
 
@@ -82,3 +151,43 @@ Podle instrukcí níže vytvořte jednoduchý formulář pro dokončení objedn�
   - Pro příliš dlouhou kartu použijte text „**Číslo karty je moc dlouhé. Přebývá X číslic.**“
 
 - Zkuste místo události `input` poslouchat na událost `change`. Jak se liší jejich chování? Která varianta je lepší? `input` nebo `change`?
+
+<details>
+<summary><b>Řešení</b></summary>
+
+Obsah souboru `index.html`:
+
+```html
+<div class="container">
+  <form>
+    <h1>Objednávka</h1>
+    <label class="field">Platební karta: <input type="text" /> </label>
+    <label class="field">
+      Doprava:
+      <select>
+        <option value="pobocka">Vyzvednout na pobočce</option>
+        <option value="zasilkovna">Zásilkovna</option>
+        <option value="posta">Česká pošta</option>
+        <option value="ppl">PPL</option>
+      </select>
+    </label>
+    <div class="controls">
+      <button type="submit">Odeslat objednávku</button>
+    </div>
+  </form>
+</div>
+```
+
+Obsah souboru `index.js`:
+
+```js
+const formular = document.querySelector('form');
+formular.addEventListener('submit', (event) => {
+  event.preventDefault();
+  formular.innerHTML = `
+      <h1>Hotovo</h1>
+      <p>Objednávka odeslána ke zpracování.</p>
+   `;
+});
+```
+</details>
