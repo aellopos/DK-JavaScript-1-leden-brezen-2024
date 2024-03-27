@@ -18,3 +18,4 @@
 | 07  | 06.03.2024 | Funkce a obory platnosti | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-obory/null-undefined) | [zadání/řešení](./solution/lekce-07.md) | [zadání](./solution/du_sedma_lekce.md) (do 17.3. 20:00)
 | 08  | 13.03.2024 | Funkce jako argumenty, události | [prezentace](https://kodim.cz/czechitas/js1/lekce/funkce-arg-udalosti/funkce-arg) | [zadání/řešení](./solution/lekce-08.md) | [zadání](./solution/du_osma_lekce.md) (do 24.3. 20:00)
 | 09  | 20.03.2024 | Procvičování událostí, formuláře | [prezentace](https://kodim.cz/czechitas/js1/lekce/udalosti-formulare/target) | [zadání/řešení](./solution/lekce-09.md) | [zadání](./solution/du_devata_lekce.md) (do 31.3. 20:00)
+| 10  | 27.03.2024 |Pole a zpracování dat| [prezentace](https://kodim.cz/czechitas/js1/lekce/pole-data/pole) | [zadání/řešení](./solution/lekce-10.md) | [zadání](./solution/du_desata_lekce.md) (do 7.4. 20:00)
