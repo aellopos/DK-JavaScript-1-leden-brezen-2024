@@ -10,7 +10,28 @@ Cvičení provádějte ve vašem JavaScript souboru.
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const spectators = [77, 43, 15, 99, 30];
+spectators.push(12);
+
+const theatre = [13.5, 12.7, 11.2, 12.3, 15.1];
+theatre.pop();
+
+const plays = [
+  'Pýcha a předsudek ',
+  'Maryša',
+  'Kauza pražské kavárny',
+  'Kdo je tady ředitel?',
+];
+let second = plays[1];
+
+const reviews = [
+  { magazine: 'Slovenka', rating: 10 },
+  { magazine: 'Zivot', rating: 8 },
+  { magazine: 'Divadelní Luk', rating: 9 },
+  { magazine: 'Makarony', rating: 1 },
+];
+```
 
 </details>
 
@@ -93,7 +114,13 @@ Vytvořte JavaScriptový program, který vepíše do stránky ovčí příběh p
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+ovciJmena.forEach((jmeno, index) => {
+  document.body.textContent += `Ovečka ${jmeno} jako ${
+    index + 1
+  }. přeskočila přes plot. `;
+});
+```
 
 </details>
 
@@ -136,7 +163,25 @@ Pomocí metody `map` vždy vytvořte pole dle zadání a vypište jej pro kontro
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const kratDva = cisla.map((cislo) => cislo * 2);
+console.log(kratDva);
+
+const delky = zvirata.map((zvire) => zvire.length);
+console.log(delky);
+
+const nazvy = napoje.map((napoj) => napoj.nazev);
+console.log(nazvy);
+
+const skladem = napoje.map((napoj) => {
+  if (napoj.skladem) {
+    return napoj.nazev;
+  } else {
+    return 'Není skladem';
+  }
+});
+```
+
 
 </details>
 
@@ -160,12 +205,118 @@ Pracujete na velkém e-shopu a vaším úkolem je z nezaplacených objednávek v
    processIdentifiers(identifikatory);
    ```
 
+
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+console.log('Funguju!')
+
+const nezaplaceneObjednavky = [
+	{
+		id: 159753246,
+		polozky: [
+			{ nazev: 'knihy', mnozstvi: 5, cena: 200 },
+			{ nazev: 'pero', mnozstvi: 1, cena: 50 },
+			{ nazev: 'sešity', mnozstvi: 3, cena: 100 },
+		],
+		datum: '2023-04-07',
+		uzivatel: {
+			jmeno: 'Tomáš',
+			email: 'tomas@volny.cz',
+		},
+	},
+	{
+		id: 456123789,
+		polozky: [
+			{ nazev: 'notebook', mnozstvi: 1, cena: 12000 },
+			{ nazev: 'myš', mnozstvi: 1, cena: 400 },
+			{ nazev: 'klávesnice', mnozstvi: 1, cena: 800 },
+			{ nazev: 'sluchátka', mnozstvi: 1, cena: 1500 },
+		],
+		datum: '2023-04-08',
+		uzivatel: {
+			jmeno: 'Markéta',
+			email: 'marketa@seznam.cz',
+		},
+	},
+	{
+		id: 987654321,
+		polozky: [
+			{ nazev: 'plavky', mnozstvi: 1, cena: 400 },
+			{ nazev: 'papuče', mnozstvi: 1, cena: 100 },
+			{ nazev: 'ručník', mnozstvi: 2, cena: 150 },
+		],
+		datum: '2023-04-09',
+		uzivatel: {
+			jmeno: 'Johanka',
+			email: 'johanka@gmail.com',
+		},
+	},
+	{
+		id: 123456789,
+		polozky: [
+			{ nazev: 'tričko', mnozstvi: 2, cena: 250 },
+			{ nazev: 'džíny', mnozstvi: 1, cena: 600 },
+			{ nazev: 'boty', mnozstvi: 1, cena: 800 },
+			{ nazev: 'pásek', mnozstvi: 1, cena: 100 },
+		],
+		datum: '2023-04-10',
+		uzivatel: {
+			jmeno: 'Jane',
+			email: 'jane@outlook.com',
+		},
+	},
+	{
+		id: 852963741,
+		polozky: [
+			{ nazev: 'míč', mnozstvi: 1, cena: 300 },
+			{ nazev: 'brankářské rukavice', mnozstvi: 1, cena: 800 },
+			{ nazev: 'tréninkové dresy', mnozstvi: 10, cena: 500 },
+			{ nazev: 'plíškový medvídek', mnozstvi: 1, cena: 150 },
+		],
+		datum: '2023-04-04',
+		uzivatel: {
+			jmeno: 'Ruda',
+			email: 'ruda@email.cz',
+		},
+	},
+	{
+		id: 753951824,
+		polozky: [
+			{ nazev: 'matrace', mnozstvi: 1, cena: 5000 },
+			{ nazev: 'polštář', mnozstvi: 2, cena: 300 },
+			{ nazev: 'povlečení', mnozstvi: 1, cena: 800 },
+		],
+		datum: '2023-04-06',
+		uzivatel: {
+			jmeno: 'Novákovi',
+			email: 'novakovi@seznam.cz',
+		},
+	},
+]
+
+const processEmails = (emails) => {
+	document.querySelector('#emaily').textContent = emails.join(', ')
+}
+
+const processIdentifiers = (identifiers) => {
+	document.querySelector('#identifikatory').textContent = identifiers.join(', ')
+}
+
+const identifikatory = nezaplaceneObjednavky.map((objednavka) => {
+	return objednavka.id
+})
+
+const emaily = nezaplaceneObjednavky.map((objednavka) => {
+	return `${objednavka.uzivatel.jmeno} <${objednavka.uzivatel.email}>`
+})
+
+processEmails(emaily)
+processIdentifiers(identifikatory)
+```
+
 
 </details>
 
-
-
+   
