@@ -4,6 +4,8 @@ Představte si, že pracujete ve webovém týmu. Kodér vám podle grafického n
 
 Protože právníci ještě ladí smlouvy s jednotlivými distributory filmů, dostanete zatím jen informace o pár filmech na vyzkoušení a jedno testovací video na vychytání přehrávače.
 
+**Pro uznání projektu je potřeba mít splněné úkoly - 1,2,3,4,5 a 8**
+
 ## 1
 
 Nejprve pro naši aplikaci založte projekt z předpřipraveného základu.
