@@ -56,24 +56,40 @@ Změňte ikonku tlačítka na křížek, pokud je menu rozbalené a na hamburger
 
 ## 4
 
-Na všech stránkách webu je horní navigace se třemi odkazy. Pro úsporu místa na malých zařízeních se mění na tlačítko s ikonkou hamburgeru. Zařiďte, aby klikání na tlačítko rozbalovalo a opět skrývalo položky menu.
+Na stránce se seznamem filmů vypište karty se všemi filmy z pole `filmy`.
 
-1. V souboru `spolecne.js` najděte pomocí `document.querySelector` prvek s id `menu-tlacitko`.
+1.  Přejděte v prohlížeči na stránku se seznamem.
 
-1. Přidejte mu posluchač události kliknutí.
+1.  Na konci souboru `seznam.js` pomocí `document.querySelector` vyhledejte prvek s id `seznam-filmu`.
 
-1. Přidejte prvku s id `menu-polozky` třídu `show` ve chvíli, kdy událost nastane.
+1.  Vymažte tomuto prvku jeho vnitřní HTML, aby byl prázdný.
 
-1. Rozšiřte kód tak, aby se třída `show` naopak odebrala, pokud ji prvek již měl.
+1.  Pomocí cyklu projděte všechny filmy z předpřipraveného pole a pro každý přidejte do prvku `#seznam-filmu` následující HTML doplněné o patřičné informace (název, ochutnávku, plakát).
+
+```html
+<div class="col">
+   <div class="card">
+      <img
+         src="https://via.placeholder.com/780x520?text=Plak%C3%A1t"
+         width="780"
+         height="520"
+         class="card-img-top"
+         alt="plakát"
+      />
+      <div class="card-body">
+         <h5 class="card-title">Název filmu</h5>
+         <p class="card-text">Krátký popisek filmu.</p>
+         <a href="film.html" class="btn btn-primary">Přehrát</a>
+      </div>
+   </div>
+</div>
+```
+
+![ellipse.png](../images/seznam.jpeg)
 
 #### Bonus
 
-Změňte ikonku tlačítka na křížek, pokud je menu rozbalené a na hamburger, pokud je sbalené.
-
-- HTML ikonky křížku: `<i class="fas fa-xmark"></i>`
-- HTML ikonky hamburgeru: `<i class="fas fa-bars"></i>`
-
-![ellipse.png](../images/filmy.jpeg)
+Přidejte do pole s filmy nějaký další dle vlastního výběru.
 
 ## 5
 
