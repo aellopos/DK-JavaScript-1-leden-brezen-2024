@@ -13,7 +13,34 @@ Ty ukazují úroveň dovedností v různých oblastech.
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const updateSkill = (id, uroven) => {
+  const postup = document.querySelector(`#${id} .skill__progress`);
+  const hodnota = document.querySelector(`#${id} .skill__value`);
+  hodnota.textContent = `${uroven} / 100`;
+  postup.style.width = `${uroven}%`;
+};
+
+const html = Number(prompt('Jaká je vaše úroveň HTML? (0 až 100)'));
+const css = Number(prompt('Jaká je vaše úroveň CSS? (0 až 100)'));
+const js = Number(prompt('Jaká je vaše úroveň JavaScriptu? (0 až 100)'));
+
+updateSkill('skill1', html);
+updateSkill('skill2', css);
+updateSkill('skill3', js);
+```
+
+Alternativa funkce updateSkill, která najde `div` podle `id` a pak hledá elementy s třídou `skill__progress` a `skill__value` v nalezeném elementu:
+
+```js
+const updateSkill = (id, uroven) => {
+  const skillElement = document.getElementById(id);
+  const progressElement = skillElement.querySelector('.skill__progress');
+  const valueElement = skillElement.querySelector('.skill__value');
+  valueElement.textContent = `${uroven} / 100`;
+  progressElement.style.width = `${uroven}%`;
+};
+```
 
 </details>
 
@@ -26,6 +53,16 @@ Napište funkci `max3`, která vrátí největší ze tří zadaných čísel. O
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const max3 = (a, b, c) => {
+  if (a > b && a > c) {
+    return a;
+  }
+  if (b > a && b > c) {
+    return b;
+  }
+  return c;
+};
+```
 
 </details>

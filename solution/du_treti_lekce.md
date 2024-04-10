@@ -9,6 +9,15 @@ Nastudujte si na [České Wikipedii](https://cs.wikipedia.org/wiki/Stupe%C5%88_F
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const fahrnheit = prompt('Zadej teplotu ve stupních Fahrenheita:');
+
+document.body.innerHTML =
+  '<h1>' +
+  fahrnheit +
+  ' stupňů Fahrenheita = ' +
+  Math.round((5 * (fahrnheit - 32)) / 9) +
+  ' stupňů Celsia';
+```
 
 </details>

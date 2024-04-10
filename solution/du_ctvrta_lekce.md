@@ -12,6 +12,19 @@ Pomocí interpolace řetězců sestavte výslednou adresu a vypište ji do strá
 <details>
 <summary><b>Řešení</b></summary>
 
-Tady zatím nic není :)
+```js
+const jmeno = prompt('Zadejte křestní jméno (bez diakritiky).')
+  .toLocaleLowerCase()
+  .trim()
+  .slice(0, 3);
+const prijmeni = prompt('Zadejte příjmení (bez diakritiky).')
+  .toLowerCase()
+  .trim()
+  .slice(0, 5);
+
+const email = `${prijmeni}${jmeno}@fit.cvut.cz`;
+document.body.innerHTML = `<p>Váš e-mail je: ${email}.</p>`;
+```
+
 
 </details>
